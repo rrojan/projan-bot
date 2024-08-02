@@ -12,6 +12,7 @@ const app = new App({
 })()
 
 app.command('/pollit', async ({ command, ack, client }) => {
+  console.log('Test')
   await ack()
 
   try {
