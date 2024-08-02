@@ -11,6 +11,16 @@ const app = new App({
   console.log('⚡️ Bolt app is running!')
 })()
 
+app.message('rojtest', async ({ message, say }) => {
+  await say('Hello there rojan')
+})
+
+app.command('/rojtest', async ({ command, ack, respond }) => {
+  await ack()
+  console.log('hello')
+  await respond('hello')
+})
+
 app.command('/pollit', async ({ command, ack, client }) => {
   console.log('Test')
   await ack()
